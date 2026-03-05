@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강태구 & 신희영 결혼합니다</title>
+    <title>강태구 & 신부이름 결혼합니다</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* 기본 모바일 최적화 스타일 */
@@ -16,7 +16,6 @@
             display: flex;
             justify-content: center;
         }
-        /* 스마트폰 화면처럼 가운데 정렬 (최대 너비 500px) */
         .wrap {
             background-color: #ffffff;
             max-width: 500px;
@@ -29,7 +28,7 @@
         /* 메인 커버 섹션 */
         .cover {
             padding: 60px 20px 40px 20px;
-            background-color: #fdfaf6; /* 따뜻한 베이지 톤 */
+            background-color: #fdfaf6;
         }
         .cover h1 {
             font-size: 1.2rem;
@@ -38,12 +37,11 @@
             margin-bottom: 30px;
             color: #555;
         }
-        /* ★ 새로 추가된 메인 사진 스타일 ★ */
         .main-photo {
             width: 100%;
-            max-height: 600px; /* 사진이 너무 길어지는 것 방지 */
-            object-fit: cover; /* 비율이 깨지지 않게 꽉 채움 */
-            border-radius: 8px; /* 모서리를 살짝 둥글게 */
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 8px;
             margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
@@ -58,21 +56,18 @@
             line-height: 1.8;
             color: #666;
         }
-        /* 구분선 */
         .divider {
             width: 30px;
             height: 1px;
             background-color: #ccc;
             margin: 40px auto;
         }
-        /* 모시는 글 섹션 */
         .greeting {
             padding: 40px 20px;
             line-height: 2;
             font-size: 0.95rem;
             color: #444;
         }
-        /* 부모님 및 혼주 정보 */
         .parents {
             margin-top: 50px;
             font-size: 1rem;
@@ -83,11 +78,51 @@
             color: #888;
             margin-right: 5px;
         }
+
+        /* ★ 새로 추가된 모바일 스와이프 갤러리 스타일 ★ */
+        .gallery-section {
+            padding: 50px 0; /* 좌우 여백을 없애 스크롤이 자연스럽게 */
+            background-color: #fff;
+        }
+        .gallery-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory; /* 사진이 중앙에 자석처럼 붙는 효과 */
+            gap: 15px;
+            padding: 0 20px 20px 20px;
+        }
+        /* 웹킷 기반 브라우저 스크롤바 디자인 */
+        .gallery-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .gallery-container::-webkit-scrollbar-thumb {
+            background-color: #ddd;
+            border-radius: 4px;
+        }
+        .gallery-item {
+            flex: 0 0 85%; /* 화면의 85%만 차지하여 다음 사진이 살짝 보이게 유도 */
+            scroll-snap-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
         /* 예식(식사) 안내 섹션 */
         .info {
             background-color: #fafafa;
             padding: 50px 20px;
-            margin-top: 40px;
+            margin-top: 0px;
         }
         .info h2 {
             font-size: 1.1rem;
@@ -129,11 +164,9 @@
 <div class="wrap">
     <div class="cover">
         <h1>결혼합니다</h1>
-        
-        <img src="photo.jpg" alt="웨딩 사진" class="main-photo">
-        
+        <img src="photo.jpg" alt="메인 웨딩 사진" class="main-photo">
         <div class="names">
-            강태구 & 신희영
+            강태구 & 신부이름
         </div>
         <div class="divider"></div>
         <div class="date-location">
@@ -159,8 +192,20 @@
 
         <div class="parents">
             <span>아버지이름 · 어머니이름 의 아들</span> <strong>강태구</strong><br>
-            <span>장인어른이름 · 장모님이름 의 딸</span> <strong>신희영</strong>
+            <span>장인어른이름 · 장모님이름 의 딸</span> <strong>신부이름</strong>
         </div>
+    </div>
+
+    <div class="gallery-section">
+        <h2>우리의 빛나는 순간</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="gallery1.jpg" alt="갤러리 사진 1"></div>
+            <div class="gallery-item"><img src="gallery2.jpg" alt="갤러리 사진 2"></div>
+            <div class="gallery-item"><img src="gallery3.jpg" alt="갤러리 사진 3"></div>
+            <div class="gallery-item"><img src="gallery4.jpg" alt="갤러리 사진 4"></div>
+            <div class="gallery-item"><img src="gallery5.jpg" alt="갤러리 사진 5"></div>
+        </div>
+        <p style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">사진을 좌우로 밀어보세요 ↔</p>
     </div>
 
     <div class="info">
@@ -192,7 +237,7 @@
         
         <div class="account-box">
             <strong>신부 측</strong><br>
-            OO은행 123-456-789012 (신희영)<br>
+            OO은행 123-456-789012 (신부이름)<br>
             OO은행 123-456-789012 (장인어른이름)
         </div>
     </div>
@@ -203,5 +248,4 @@
 </div>
 
 </body>
-
 </html>
