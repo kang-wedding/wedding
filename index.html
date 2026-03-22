@@ -34,8 +34,8 @@
             padding: 80px 20px 40px 20px;
         }
         .cover h1 {
-            font-size: 1.2rem;
-            font-weight: 400;
+            font-size: 1.4rem; /* 한 치수 크게 */
+            font-weight: 700;  /* 진하게 */
             letter-spacing: 3px;
             margin-bottom: 30px;
             color: #7A6F62;
@@ -75,6 +75,14 @@
             line-height: 2.2;
             font-size: 0.95rem;
         }
+        /* 축의금 사양 문구 강조 스타일 */
+        .greeting .notice {
+            font-size: 0.9rem;
+            color: #7A6F62;
+            font-weight: 700;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
         .parents {
             margin-top: 50px;
             font-size: 1.05rem;
@@ -84,6 +92,11 @@
             font-size: 0.85rem;
             color: #8D8173;
             margin-right: 5px;
+        }
+        /* 부모님 성함 진하게 처리 및 색상 조정 */
+        .parents span strong {
+            font-weight: 700;
+            color: #5A5146; 
         }
 
         /* 모바일 스와이프 갤러리 스타일 */
@@ -114,36 +127,20 @@
         
         /* ★ 갤러리 아이템 리사이즈 최적화 ★ */
         .gallery-item {
-            flex: 0 0 82%; /* 모바일 화면 너비의 82% 차지 (다음 사진이 살짝 보임) */
-            aspect-ratio: 3 / 4; /* 가로, 세로 사진 모두 3:4 세로 비율로 통일 */
+            flex: 0 0 82%; 
+            aspect-ratio: 3 / 4; 
             scroll-snap-align: center;
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            background-color: #f5f5f5; /* 사진 로딩 전 배경색 */
+            background-color: #f5f5f5; 
         }
         .gallery-item img {
             width: 100%;
-            height: 100%; /* 부모의 비율(3:4)에 꽉 차게 설정 */
+            height: 100%; 
             display: block;
-            object-fit: cover; /* 비율이 달라도 찌그러지지 않고 꽉 채움 */
-            object-position: center; /* 사진의 중심을 기준으로 크롭 */
-        }
-
-        /* 예식(식사) 안내 섹션 */
-        .info {
-            padding: 50px 20px 20px 20px;
-            margin-top: 0px;
-        }
-        .info h2 {
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
-        .info p {
-            font-size: 0.95rem;
-            line-height: 2;
-            color: #5A5146;
+            object-fit: cover; 
+            object-position: center; 
         }
 
         /* 신혼여행 소식 섹션 */
@@ -189,6 +186,10 @@
     </div>
 
     <div class="greeting">
+        <div class="notice">
+            * 가족분들을 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다.
+        </div>
+
         서로를 마주 보며 다져온 인연을<br>
         이제는 함께 같은 곳을 바라보며<br>
         걸어가려 합니다.<br><br>
@@ -204,8 +205,8 @@
         그 마음 깊이 간직하며 예쁘게 잘 살겠습니다.
 
         <div class="parents">
-            <span><strong>강영태 · 김경자<strong> 의 아들</span> <strong>강태구</strong><br>
-            <span><strong>신현갑 · 송현숙<strong> 의 딸</span> <strong>신희영</strong>
+            <span><strong>강영태 · 김경자</strong> 의 아들</span> <strong>강태구</strong><br>
+            <span><strong>신현갑 · 송현숙</strong> 의 딸</span> <strong>신희영</strong>
         </div>
     </div>
 
@@ -226,20 +227,6 @@
         <p style="font-size: 0.8rem; color: #A89B8C; margin-top: 5px;">사진을 좌우로 밀어보세요 ↔</p>
     </div>
 
-    <div class="info">
-        <h2>식사 자리 안내</h2>
-        <p>
-            <strong>일시:</strong> 2026년 4월 18일 (금) 오전 11시<br>
-            <strong>장소:</strong> [메이필드호텔]<br>
-            서울 강서구 방화대로 94<br>
-            (주차: 메이필드호텔 내 주차장 이용)
-        </p>
-        <div class="divider"></div>
-        <p style="font-size: 0.85rem; color: #8D8173;">
-            * 가족분들을 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다.
-        </p>
-    </div>
-
     <div class="divider"></div>
 
     <div class="honeymoon">
@@ -252,7 +239,6 @@
         </p>
     </div>
 
-    
 </div>
 
 </body>
