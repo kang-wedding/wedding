@@ -8,19 +8,22 @@
     <style>
         /* 기본 모바일 최적화 스타일 */
         body {
-            background-color: #ECE7E0;
+            background-color: #EAE6DF; /* 배경 톤을 살짝 더 차분하게 */
             font-family: 'Nanum Myeongjo', serif;
-            color: #4A4238;
+            color: #554C43; /* 폰트 컬러를 부드러운 차콜 브라운으로 변경 */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
         }
         .wrap {
-            background: linear-gradient(135deg, #FFFCF7 0%, #F5EBE0 50%, #FFFCF7 100%);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 
-                        inset 0 0 0 4px rgba(255,255,255,0.8), 
-                        inset 0 0 0 5px #D1BFA5;
+            background: linear-gradient(135deg, #FFFCF7 0%, #F8EFE3 50%, #FFFCF7 100%);
+            /* 더 섬세한 이중 금박 라인 효과 */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06), 
+                        inset 0 0 0 5px #FFFCF7, 
+                        inset 0 0 0 6px #D1BFA5,
+                        inset 0 0 0 12px #FFFCF7,
+                        inset 0 0 0 13px #E5D5C1;
             max-width: 500px;
             width: 100%;
             min-height: 100vh;
@@ -31,83 +34,96 @@
         
         /* 메인 커버 섹션 */
         .cover {
-            padding: 80px 20px 40px 20px;
+            padding: 90px 20px 50px 20px; /* 여백 확대 */
         }
         .cover h1 {
-            font-size: 1.4rem; /* 한 치수 크게 */
-            font-weight: 700;  /* 진하게 */
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-            color: #7A6F62;
+            font-size: 1.4rem; 
+            font-weight: 700;  
+            letter-spacing: 5px; /* 자간을 넓혀 우아한 느낌 강조 */
+            margin-bottom: 35px;
+            color: #8B7D6B;
         }
         .main-photo {
-            width: 100%;
+            width: calc(100% - 20px); /* 사진에 약간의 여백 부여 */
             max-height: 600px;
             object-fit: cover;
             border-radius: 4px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+            margin: 0 auto 35px auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
         .cover .names {
-            font-size: 1.9rem;
+            font-size: 2rem; /* 이름 크기 미세 확대 */
             font-weight: 700;
-            margin: 20px 0;
-            color: #3B332A;
-            letter-spacing: 1px;
+            margin: 25px 0;
+            color: #4A4238;
+            letter-spacing: 2px;
         }
         .cover .date-location {
             font-size: 1.05rem;
-            line-height: 1.8;
-            color: #685F53;
+            line-height: 1.9;
+            color: #72675C;
+            letter-spacing: 0.5px;
         }
         
-        /* 금속 디테일의 골드 그라데이션 디바이더 */
+        /* 섬세한 금색 그라데이션 메인 디바이더 */
         .divider {
-            width: 60px;
-            height: 1.5px;
+            width: 50px;
+            height: 1px;
             background: linear-gradient(to right, transparent, #C8A97E, transparent);
-            margin: 40px auto;
+            margin: 45px auto;
         }
         
         /* 인사말 섹션 */
         .greeting {
-            padding: 40px 20px;
-            line-height: 2.2;
+            padding: 30px 20px 50px 20px;
+            line-height: 2.4; /* 줄 간격 확대하여 세련된 느낌 부여 */
             font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
+        
         /* 축의금 사양 문구 강조 스타일 */
         .greeting .notice {
-            font-size: 0.9rem;
-            color: #7A6F62;
+            font-size: 0.95rem;
+            color: #8B7D6B;
             font-weight: 700;
-            margin-bottom: 35px;
+            margin-bottom: 25px; /* 여백 축소 (아래 라인이 들어가므로) */
             line-height: 1.8;
+            letter-spacing: 0.5px;
         }
+        
+        /* 안내 문구 하단 서브 디바이더 (새로 추가됨) */
+        .divider-small {
+            width: 30px;
+            height: 1px;
+            background-color: #D1BFA5;
+            margin: 0 auto 40px auto;
+        }
+
         .parents {
-            margin-top: 50px;
-            font-size: 1.05rem;
-            line-height: 2;
+            margin-top: 55px;
+            font-size: 1.1rem;
+            line-height: 2.1;
         }
         .parents span {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #8D8173;
-            margin-right: 5px;
+            margin-right: 6px;
+            letter-spacing: 0px;
         }
-        /* 부모님 성함 진하게 처리 및 색상 조정 */
         .parents span strong {
             font-weight: 700;
-            color: #5A5146; 
+            color: #554C43; 
         }
 
         /* 모바일 스와이프 갤러리 스타일 */
         .gallery-section {
-            padding: 50px 0;
+            padding: 40px 0 60px 0;
         }
         .gallery-section h2 {
-            font-size: 1.15rem;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-            color: #4A4238;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            color: #6C6052;
         }
         .gallery-container {
             display: flex;
@@ -116,24 +132,24 @@
             gap: 15px;
             padding: 0 20px 20px 20px;
         }
-        /* 웹킷 기반 브라우저 스크롤바 디자인 (골드 톤 적용) */
         .gallery-container::-webkit-scrollbar {
-            height: 3px;
+            height: 2px; /* 스크롤바를 조금 더 얇고 세련되게 */
         }
         .gallery-container::-webkit-scrollbar-thumb {
             background-color: #D1BFA5;
             border-radius: 4px;
         }
         
-        /* ★ 갤러리 아이템 리사이즈 최적화 ★ */
+        /* 갤러리 아이템 리사이즈 */
         .gallery-item {
             flex: 0 0 82%; 
             aspect-ratio: 3 / 4; 
             scroll-snap-align: center;
-            border-radius: 6px;
+            border-radius: 4px; /* 테두리를 살짝 더 각지게 하여 모던한 느낌 */
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
             background-color: #f5f5f5; 
+            border: 1px solid #EAE3D9; /* 사진에 얇은 테두리 추가 */
         }
         .gallery-item img {
             width: 100%;
@@ -145,27 +161,19 @@
 
         /* 신혼여행 소식 섹션 */
         .honeymoon {
-            padding: 20px 20px 50px 20px;
+            padding: 20px 20px 70px 20px;
         }
         .honeymoon h2 {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             margin-bottom: 25px;
-            letter-spacing: 1px;
-            color: #4A4238;
+            letter-spacing: 2px;
+            color: #6C6052;
         }
         .honeymoon p {
             font-size: 0.95rem;
-            line-height: 2;
-            color: #5A5146;
-        }
-        
-        /* 푸터 섹션 */
-        .footer {
-            padding: 40px 20px;
-            color: #8D8173;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
+            line-height: 2.2;
+            color: #72675C;
+            letter-spacing: 0.3px;
         }
     </style>
 </head>
@@ -181,14 +189,16 @@
         <div class="divider"></div>
         <div class="date-location">
             2026년 4월 18일 토요일 오전 11시<br>
-            [메이필드호텔 봉래헌]
+            [메이필드호텔]
         </div>
     </div>
 
     <div class="greeting">
         <div class="notice">
-            * 가족분들을 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다.
+            * 가족분들을 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다. *
         </div>
+        
+        <div class="divider-small"></div>
 
         서로를 마주 보며 다져온 인연을<br>
         이제는 함께 같은 곳을 바라보며<br>
@@ -224,7 +234,7 @@
             <div class="gallery-item"><img src="gallery9.jpg" alt="갤러리 사진 9"></div>
             <div class="gallery-item"><img src="gallery10.jpg" alt="갤러리 사진 10"></div>
         </div>
-        <p style="font-size: 0.8rem; color: #A89B8C; margin-top: 5px;">사진을 좌우로 밀어보세요 ↔</p>
+        <p style="font-size: 0.8rem; color: #B3A89A; margin-top: 10px;">사진을 좌우로 밀어보세요 ↔</p>
     </div>
 
     <div class="divider"></div>
@@ -233,7 +243,7 @@
         <h2>신혼여행 소식</h2>
         <p>
             저희 두 사람은 4월 20일부터 24일까지<br>
-            오키나와로 신혼여행을 다녀옵니다.<br><br>
+            오키나와(일본)로 신혼여행을 다녀옵니다.<br><br>
             축복해 주신 마음 깊이 간직하며<br>
             잘 다녀오겠습니다.
         </p>
