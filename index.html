@@ -8,108 +8,117 @@
     <style>
         /* 기본 모바일 최적화 스타일 */
         body {
-            background-color: #f9f9f9;
+            background-color: #ECE7E0; /* 카드 밖 배경을 차분한 웜톤으로 변경 */
             font-family: 'Nanum Myeongjo', serif;
-            color: #333;
+            color: #4A4238; /* 전체 글씨 톤을 따뜻하고 고급스러운 다크 브라운/그레이로 변경 */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
         }
         .wrap {
-            background-color: #ffffff;
+            /* 샴페인 골드 & 펄 화이트 그라데이션 배경 */
+            background: linear-gradient(135deg, #FFFCF7 0%, #F5EBE0 50%, #FFFCF7 100%);
+            /* 금박 호일 느낌의 이중 테두리 효과 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 
+                        inset 0 0 0 4px rgba(255,255,255,0.8), 
+                        inset 0 0 0 5px #D1BFA5;
             max-width: 500px;
             width: 100%;
             min-height: 100vh;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
             text-align: center;
             overflow: hidden;
+            position: relative;
         }
+        
         /* 메인 커버 섹션 */
         .cover {
-            padding: 60px 20px 40px 20px;
-            background-color: #fdfaf6;
+            padding: 80px 20px 40px 20px;
         }
         .cover h1 {
             font-size: 1.2rem;
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 30px;
-            color: #555;
+            color: #7A6F62;
         }
         .main-photo {
             width: 100%;
             max-height: 600px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 4px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
         }
         .cover .names {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
             margin: 20px 0;
-            color: #222;
+            color: #3B332A;
+            letter-spacing: 1px;
         }
         .cover .date-location {
-            font-size: 1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
-            color: #666;
+            color: #685F53;
         }
+        
+        /* 금속 디테일의 골드 그라데이션 디바이더 */
         .divider {
-            width: 30px;
-            height: 1px;
-            background-color: #ccc;
+            width: 60px;
+            height: 1.5px;
+            background: linear-gradient(to right, transparent, #C8A97E, transparent);
             margin: 40px auto;
         }
+        
+        /* 인사말 섹션 */
         .greeting {
             padding: 40px 20px;
-            line-height: 2;
+            line-height: 2.2;
             font-size: 0.95rem;
-            color: #444;
         }
         .parents {
             margin-top: 50px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             line-height: 2;
         }
         .parents span {
             font-size: 0.85rem;
-            color: #888;
+            color: #8D8173;
             margin-right: 5px;
         }
 
-        /* ★ 새로 추가된 모바일 스와이프 갤러리 스타일 ★ */
+        /* 모바일 스와이프 갤러리 스타일 */
         .gallery-section {
-            padding: 50px 0; /* 좌우 여백을 없애 스크롤이 자연스럽게 */
-            background-color: #fff;
+            padding: 50px 0;
         }
         .gallery-section h2 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #333;
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            color: #4A4238;
         }
         .gallery-container {
             display: flex;
             overflow-x: auto;
-            scroll-snap-type: x mandatory; /* 사진이 중앙에 자석처럼 붙는 효과 */
+            scroll-snap-type: x mandatory;
             gap: 15px;
             padding: 0 20px 20px 20px;
         }
-        /* 웹킷 기반 브라우저 스크롤바 디자인 */
+        /* 웹킷 기반 브라우저 스크롤바 디자인 (골드 톤 적용) */
         .gallery-container::-webkit-scrollbar {
-            height: 4px;
+            height: 3px;
         }
         .gallery-container::-webkit-scrollbar-thumb {
-            background-color: #ddd;
+            background-color: #D1BFA5;
             border-radius: 4px;
         }
         .gallery-item {
-            flex: 0 0 85%; /* 화면의 85%만 차지하여 다음 사진이 살짝 보이게 유도 */
+            flex: 0 0 85%;
             scroll-snap-align: center;
-            border-radius: 8px;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
         .gallery-item img {
             width: 100%;
@@ -120,42 +129,27 @@
 
         /* 예식(식사) 안내 섹션 */
         .info {
-            background-color: #fafafa;
             padding: 50px 20px;
             margin-top: 0px;
         }
         .info h2 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 30px;
-            color: #333;
+            letter-spacing: 1px;
         }
         .info p {
             font-size: 0.95rem;
-            line-height: 1.8;
-            color: #555;
+            line-height: 2;
+            color: #5A5146;
         }
-        /* 계좌번호 섹션 */
-        .account {
-            padding: 50px 20px;
-        }
-        .account h2 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-        .account-box {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            text-align: left;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
+        
+        /* 푸터 섹션 */
         .footer {
-            padding: 30px;
-            background-color: #eee;
-            color: #888;
-            font-size: 0.8rem;
+            padding: 40px 20px;
+            color: #8D8173;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -204,8 +198,13 @@
             <div class="gallery-item"><img src="gallery3.jpg" alt="갤러리 사진 3"></div>
             <div class="gallery-item"><img src="gallery4.jpg" alt="갤러리 사진 4"></div>
             <div class="gallery-item"><img src="gallery5.jpg" alt="갤러리 사진 5"></div>
+            <div class="gallery-item"><img src="gallery6.jpg" alt="갤러리 사진 6"></div>
+            <div class="gallery-item"><img src="gallery7.jpg" alt="갤러리 사진 7"></div>
+            <div class="gallery-item"><img src="gallery8.jpg" alt="갤러리 사진 8"></div>
+            <div class="gallery-item"><img src="gallery9.jpg" alt="갤러리 사진 9"></div>
+            <div class="gallery-item"><img src="gallery10.jpg" alt="갤러리 사진 10"></div>
         </div>
-        <p style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">사진을 좌우로 밀어보세요 ↔</p>
+        <p style="font-size: 0.8rem; color: #A89B8C; margin-top: 5px;">사진을 좌우로 밀어보세요 ↔</p>
     </div>
 
     <div class="info">
@@ -217,29 +216,9 @@
             (주차: 메이필드호텔 내 주차장 이용)
         </p>
         <div class="divider"></div>
-        <p style="font-size: 0.85rem; color: #888;">
+        <p style="font-size: 0.85rem; color: #8D8173;">
             * 가족분들을 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다.
         </p>
-    </div>
-
-    <div class="account">
-        <h2>마음 전하실 곳</h2>
-        <p style="font-size: 0.85rem; color: #777; margin-bottom: 30px;">
-            따뜻한 마음으로 축하해 주시는 모든 분들께 감사드립니다.<br>
-            바르고 지혜롭게 잘 살겠습니다.
-        </p>
-        
-        <div class="account-box">
-            <strong>신랑 측</strong><br>
-            카카오뱅크 3333-01-5650207 (강태구)<br>
-            농협은행 735080-51-036329 (김경자)
-        </div>
-        
-        <div class="account-box">
-            <strong>신부 측</strong><br>
-            우리은행 1002-837-547920 (신희영)<br>
-            우리은행 1002-734-796143 (송현숙)
-        </div>
     </div>
 
     <div class="footer">
@@ -249,6 +228,3 @@
 
 </body>
 </html>
-
-
-
