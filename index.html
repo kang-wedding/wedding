@@ -1,283 +1,281 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강태구 & 신희영 결혼합니다</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* 기본 모바일 최적화 스타일 */
-        body {
-            background-color: #EAE6DF; /* 배경 톤을 살짝 더 차분하게 */
-            font-family: 'Nanum Myeongjo', serif;
-            color: #554C43; /* 폰트 컬러를 부드러운 차콜 브라운으로 변경 */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        .wrap {
-            background: linear-gradient(135deg, #FFFCF7 0%, #F8EFE3 50%, #FFFCF7 100%);
-            /* 더 섬세한 이중 금박 라인 효과 */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06), 
-                        inset 0 0 0 5px #FFFCF7, 
-                        inset 0 0 0 6px #D1BFA5,
-                        inset 0 0 0 12px #FFFCF7,
-                        inset 0 0 0 13px #E5D5C1;
-            max-width: 500px;
-            width: 100%;
-            min-height: 100vh;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        /* 메인 커버 섹션 */
-        .cover {
-            padding: 90px 20px 50px 20px; /* 여백 확대 */
-        }
-        .cover h1 {
-            font-size: 1.4rem; 
-            font-weight: 700;  
-            letter-spacing: 5px; /* 자간을 넓혀 우아한 느낌 강조 */
-            margin-bottom: 35px;
-            color: #8B7D6B;
-        }
-        .main-photo {
-            width: calc(100% - 20px); /* 사진에 약간의 여백 부여 */
-            max-height: 600px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin: 0 auto 35px auto;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-        .cover .names {
-            font-size: 2rem; /* 이름 크기 미세 확대 */
-            font-weight: 700;
-            margin: 25px 0;
-            color: #4A4238;
-            letter-spacing: 2px;
-        }
-        .cover .date-location {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: #72675C;
-            letter-spacing: 0.5px;
-        }
-        
-        /* 섬세한 금색 그라데이션 메인 디바이더 */
-        .divider {
-            width: 50px;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #C8A97E, transparent);
-            margin: 45px auto;
-        }
-        
-        /* 인사말 섹션 */
-        .greeting {
-            padding: 30px 20px 50px 20px;
-            line-height: 2.4; /* 줄 간격 확대하여 세련된 느낌 부여 */
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-        }
-        
-        /* 축의금 사양 문구 강조 스타일 */
-        .greeting .notice {
-            font-size: 1rem; /* 글씨 크기 약간 확대 */
-            color: #72675C; /* 진한 컬러로 변경 */
-            font-weight: 700; /* 진하게 설정 */
-            margin-bottom: 25px; /* 여백 축소 */
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-        }
-        
-        /* 안내 문구 하단 서브 디바이더 */
-        .divider-small {
-            width: 30px;
-            height: 1px;
-            background-color: #D1BFA5;
-            margin: 0 auto 40px auto;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강태구 & 신희영 결혼합니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 모바일 최적화 스타일 */
+        body {
+            background-color: #EAE6DF; /* 배경 톤을 살짝 더 차분하게 */
+            font-family: 'Nanum Myeongjo', serif;
+            color: #554C43; /* 폰트 컬러를 부드러운 차콜 브라운으로 변경 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .wrap {
+            background: linear-gradient(135deg, #FFFCF7 0%, #F8EFE3 50%, #FFFCF7 100%);
+            /* 더 섬세한 이중 금박 라인 효과 */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06), 
+                        inset 0 0 0 5px #FFFCF7, 
+                        inset 0 0 0 6px #D1BFA5,
+                        inset 0 0 0 12px #FFFCF7,
+                        inset 0 0 0 13px #E5D5C1;
+            max-width: 500px;
+            width: 100%;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 메인 커버 섹션 */
+        .cover {
+            padding: 90px 20px 50px 20px; /* 여백 확대 */
+        }
+        .cover h1 {
+            font-size: 1.4rem; 
+            font-weight: 700;  
+            letter-spacing: 5px; /* 자간을 넓혀 우아한 느낌 강조 */
+            margin-bottom: 35px;
+            color: #8B7D6B;
+        }
+        .main-photo {
+            width: calc(100% - 20px); /* 사진에 약간의 여백 부여 */
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 0 auto 35px auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .cover .names {
+            font-size: 2rem; /* 이름 크기 미세 확대 */
+            font-weight: 700;
+            margin: 25px 0;
+            color: #4A4238;
+            letter-spacing: 2px;
+        }
+        .cover .date-location {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #72675C;
+            letter-spacing: 0.5px;
+        }
+        
+        /* 섬세한 금색 그라데이션 메인 디바이더 */
+        .divider {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C8A97E, transparent);
+            margin: 45px auto;
+        }
+        
+        /* 인사말 섹션 */
+        .greeting {
+            padding: 30px 20px 50px 20px;
+            line-height: 2.4; /* 줄 간격 확대하여 세련된 느낌 부여 */
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+        
+        /* 축의금 사양 문구 강력한 강조 스타일 */
+        .greeting .notice {
+            font-size: 1.05rem; /* 글씨 크기 확대 */
+            color: #3B332A; /* 텍스트를 가장 진한 톤으로 변경하여 대비 높임 */
+            font-weight: 800; /* 가장 굵은 웨이트 적용 */
+            margin-bottom: 25px; /* 여백 축소 */
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+        
+        /* 안내 문구 하단 서브 디바이더 */
+        .divider-small {
+            width: 30px;
+            height: 1px;
+            background-color: #D1BFA5;
+            margin: 0 auto 40px auto;
+        }
 
-        .parents {
-            margin-top: 55px;
-            font-size: 1.1rem;
-            line-height: 2.1;
-        }
-        .parents span {
-            font-size: 0.9rem;
-            color: #8D8173;
-            margin-right: 6px;
-            letter-spacing: 0px;
-        }
-        .parents span strong {
-            font-weight: 700;
-            color: #554C43; 
-        }
+        .parents {
+            margin-top: 55px;
+            font-size: 1.1rem;
+            line-height: 2.1;
+        }
+        .parents span {
+            font-size: 0.9rem;
+            color: #8D8173;
+            margin-right: 6px;
+            letter-spacing: 0px;
+        }
+        .parents span strong {
+            font-weight: 700;
+            color: #554C43; 
+        }
 
-        /* 갤러리 섹션 */
-        .gallery-section {
-            padding: 40px 0 80px 0; /* 마지막 섹션이므로 하단 여백을 조금 더 확보 */
-            position: relative; /* 내비게이션 버튼 배치를 위해 */
-        }
-        .gallery-section h2 {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            color: #6C6052;
-        }
+        /* 갤러리 섹션 */
+        .gallery-section {
+            padding: 40px 0 80px 0; /* 마지막 섹션이므로 하단 여백을 조금 더 확보 */
+            position: relative; /* 내비게이션 버튼 배치를 위해 */
+        }
+        .gallery-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            color: #6C6052;
+        }
 
-        /* PC용 갤러리 스크롤 개선 */
-        .gallery-wrapper {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        /* PC용 갤러리 스크롤 개선 */
+        .gallery-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-        .gallery-container {
-            display: flex;
-            overflow-x: auto; /* 터치 스크롤 유지 */
-            scroll-snap-type: x mandatory;
-            gap: 15px;
-            padding: 0 20px 20px 20px;
-            scroll-behavior: smooth; /* 부드러운 스크롤 */
-            /* PC에서 마우스 드래그 스크롤을 위한 자바스크립트 사용 시 스냅 방해될 수 있어 설정 조절 */
-            -webkit-overflow-scrolling: touch; 
-        }
+        .gallery-container {
+            display: flex;
+            overflow-x: auto; /* 터치 스크롤 유지 */
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 0 20px 20px 20px;
+            scroll-behavior: smooth; /* 부드러운 스크롤 */
+            /* PC에서 마우스 드래그 스크롤을 위한 자바스크립트 사용 시 스냅 방해될 수 있어 설정 조절 */
+            -webkit-overflow-scrolling: touch; 
+        }
 
-        /* PC에서 스크롤바 숨기기 */
-        @media (pointer: fine) {
-            .gallery-container {
-                scrollbar-width: none; /* Firefox */
-                -ms-overflow-style: none; /* IE/Edge */
-            }
-            .gallery-container::-webkit-scrollbar {
-                display: none; /* Chrome, Safari */
-            }
-        }
-        
-        /* 갤러리 아이템 리사이즈 */
-        .gallery-item {
-            flex: 0 0 82%; 
-            aspect-ratio: 3 / 4; 
-            scroll-snap-align: center;
-            border-radius: 4px; /* 테두리를 살짝 더 각지게 하여 모던한 느낌 */
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-            background-color: #f5f5f5; 
-            border: 1px solid #EAE3D9; /* 사진에 얇은 테두리 추가 */
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%; 
-            display: block;
-            object-fit: cover; 
-            object-position: center;
-            /* PC에서 이미지 드래그 방지 (스크롤드래그와 충돌방지) */
-            -webkit-user-drag: none;
-            user-select: none;
-        }
+        /* PC에서 스크롤바 숨기기 */
+        @media (pointer: fine) {
+            .gallery-container {
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE/Edge */
+            }
+            .gallery-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari */
+            }
+        }
+        
+        /* 갤러리 아이템 리사이즈 */
+        .gallery-item {
+            flex: 0 0 82%; 
+            aspect-ratio: 3 / 4; 
+            scroll-snap-align: center;
+            border-radius: 4px; /* 테두리를 살짝 더 각지게 하여 모던한 느낌 */
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            background-color: #f5f5f5; 
+            border: 1px solid #EAE3D9; /* 사진에 얇은 테두리 추가 */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%; 
+            display: block;
+            object-fit: cover; 
+            object-position: center;
+            /* PC에서 이미지 드래그 방지 (스크롤드래그와 충돌방지) */
+            -webkit-user-drag: none;
+            user-select: none;
+        }
 
-        /* PC 내비게이션 버튼 */
-        .gallery-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-100%); /* 아이템 위치 고려 조절 */
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #8D8173;
-            border: 1px solid #D1BFA5;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: none; /* 기본 숨김 */
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transition: background 0.3s;
-        }
-        .gallery-nav:hover {
-            background-color: rgba(255, 255, 255, 1);
-        }
-        .gallery-nav.prev { left: 10px; }
-        .gallery-nav.next { right: 10px; }
+        /* PC 내비게이션 버튼 */
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-100%); /* 아이템 위치 고려 조절 */
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #8D8173;
+            border: 1px solid #D1BFA5;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none; /* 기본 숨김 */
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+        .gallery-nav:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .gallery-nav.prev { left: 10px; }
+        .gallery-nav.next { right: 10px; }
 
-        /* PC(pointer가 fine) 환경에서만 버튼 표시 */
-        @media (pointer: fine) {
-            .gallery-nav {
-                display: flex;
-            }
-            /* PC에서 스냅 기능이 마우스 드래그를 방해할 수 있으므로 설정 조절 (선택사항) */
-            /* .gallery-container { scroll-snap-type: none; } */
-        }
-    </style>
+        /* PC(pointer가 fine) 환경에서만 버튼 표시 */
+        @media (pointer: fine) {
+            .gallery-nav {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="wrap">
-    <div class="cover">
-        <h1>결혼합니다</h1>
-        <img src="photo.jpg" alt="메인 웨딩 사진" class="main-photo">
-        <div class="names">
-            강태구 & 신희영
-        </div>
-        <div class="divider"></div>
-        <div class="date-location">
-            2026년 4월 18일 토요일 오전 11시 30분<br>
-            메이필드호텔
-        </div>
-    </div>
+    <div class="cover">
+        <h1>결혼합니다</h1>
+        <img src="photo.jpg" alt="메인 웨딩 사진" class="main-photo">
+        <div class="names">
+            강태구 & 신희영
+        </div>
+        <div class="divider"></div>
+        <div class="date-location">
+            2026년 4월 18일 토요일 오전 11시 30분<br>
+            메이필드호텔
+        </div>
+    </div>
 
-    <div class="greeting">
-        <div class="notice">
-            * 가족분들만 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다. *
-        </div>
-        
-        <div class="divider-small"></div>
+    <div class="greeting">
+        <div class="notice">
+            <strong>* 가족분들만 모시는 자리이므로,<br>축의금과 화환은 정중히 사양합니다. *</strong>
+        </div>
+        
+        <div class="divider-small"></div>
 
-        서로를 마주 보며 다져온 인연을<br>
-        이제는 함께 같은 곳을 바라보며<br>
-        걸어가려 합니다.<br><br>
-        
-        화려하고 거창한 예식보다는<br>
-        진실한 약속을 나누는 자리가 더 뜻깊다고 생각하여,<br>
-        가족분들만 모시고 조촐한 식사 자리로<br>
-        결혼식을 대신하게 되었습니다.<br><br>
+        서로를 마주 보며 다져온 인연을<br>
+        이제는 함께 같은 곳을 바라보며<br>
+        걸어가려 합니다.<br><br>
+        
+        화려하고 거창한 예식보다는<br>
+        진실한 약속을 나누는 자리가 더 뜻깊다고 생각하여,<br>
+        가족분들만 모시고 조촐한 식사 자리로<br>
+        결혼식을 대신하게 되었습니다.<br><br>
 
-        부득이하게 많은 분들을 모시지 못해<br>
-        송구하고 아쉬운 마음이 크지만,<br>
-        멀리서나마 저희의 새로운 출발을 축복해 주신다면<br>
-        그 마음 깊이 간직하며 예쁘게 잘 살겠습니다.
+        부득이하게 많은 분들을 모시지 못해<br>
+        송구하고 아쉬운 마음이 크지만,<br>
+        멀리서나마 저희의 새로운 출발을 축복해 주신다면<br>
+        그 마음 깊이 간직하며 예쁘게 잘 살겠습니다.
 
-        <div class="parents">
-            <span><strong>강영태 · 김경자</strong> 의 아들</span> <strong>강태구</strong><br>
-            <span><strong>신현갑 · 송현숙</strong> 의 딸</span> <strong>신희영</strong>
-        </div>
-    </div>
+        <div class="parents">
+            <span><strong>강영태 · 김경자</strong> 의 아들</span> <strong>강태구</strong><br>
+            <span><strong>신현갑 · 송현숙</strong> 의 딸</span> <strong>신희영</strong>
+        </div>
+    </div>
 
-    <div class="gallery-section">
-        <h2>우리의 빛나는 순간</h2>
-        <div class="gallery-wrapper">
-            <button class="gallery-nav prev" id="prevBtn" title="이전 사진">❮</button>
-            <div class="gallery-container" id="galleryContainer">
-                <div class="gallery-item"><img src="gallery1.jpg" alt="갤러리 사진 1"></div>
-                <div class="gallery-item"><img src="gallery2.jpg" alt="갤러리 사진 2"></div>
-                <div class="gallery-item"><img src="gallery3.jpg" alt="갤러리 사진 3"></div>
-                <div class="gallery-item"><img src="gallery4.jpg" alt="갤러리 사진 4"></div>
-                <div class="gallery-item"><img src="gallery5.jpg" alt="갤러리 사진 5"></div>
-                <div class="gallery-item"><img src="gallery6.jpg" alt="갤러리 사진 6"></div>
-                <div class="gallery-item"><img src="gallery7.jpg" alt="갤러리 사진 7"></div>
-                <div class="gallery-item"><img src="gallery8.jpg" alt="갤러리 사진 8"></div>
-                <div class="gallery-item"><img src="gallery9.jpg" alt="갤러리 사진 9"></div>
-            <div class="gallery-item"><img src="gallery10.jpg" alt="갤러리 사진 10"></div>
-            </div>
-            <button class="gallery-nav next" id="nextBtn" title="다음 사진">❯</button>
-        </div>
-        <p style="font-size: 0.8rem; color: #B3A89A; margin-top: 10px;">사진을 좌우로 밀어보세요 ↔</p>
-    </div>
+    <div class="gallery-section">
+        <h2>우리의 빛나는 순간</h2>
+        <div class="gallery-wrapper">
+            <button class="gallery-nav prev" id="prevBtn" title="이전 사진">❮</button>
+            <div class="gallery-container" id="galleryContainer">
+                <div class="gallery-item"><img src="gallery1.jpg" alt="갤러리 사진 1"></div>
+                <div class="gallery-item"><img src="gallery2.jpg" alt="갤러리 사진 2"></div>
+                <div class="gallery-item"><img src="gallery3.jpg" alt="갤러리 사진 3"></div>
+                <div class="gallery-item"><img src="gallery4.jpg" alt="갤러리 사진 4"></div>
+                <div class="gallery-item"><img src="gallery5.jpg" alt="갤러리 사진 5"></div>
+                <div class="gallery-item"><img src="gallery6.jpg" alt="갤러리 사진 6"></div>
+                <div class="gallery-item"><img src="gallery7.jpg" alt="갤러리 사진 7"></div>
+                <div class="gallery-item"><img src="gallery8.jpg" alt="갤러리 사진 8"></div>
+                <div class="gallery-item"><img src="gallery9.jpg" alt="갤러리 사진 9"></div>
+                <div class="gallery-item"><img src="gallery10.jpg" alt="갤러리 사진 10"></div>
+            </div>
+            <button class="gallery-nav next" id="nextBtn" title="다음 사진">❯</button>
+        </div>
+        <p style="font-size: 0.8rem; color: #B3A89A; margin-top: 10px;">사진을 좌우로 밀어보세요 ↔</p>
+    </div>
 
 </div>
 
@@ -308,24 +306,21 @@
         });
     }
 
-    // PC에서 마우스 드래그 스크롤 구현 (pointer가 fine인 환경에서만 작동하도록 조건 걸 수 있음)
+    // PC에서 마우스 드래그 스크롤 구현
     let isDown = false;
     let startX;
     let scrollLeft;
 
-    // 모바일 터치 환경인지 확인 (간단한 버전)
     const isTouchDevice = () => {
         return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
     };
 
-    // PC 환경(터치 기기가 아닌 경우)에서만 마우스 드래그 등록
     if (!isTouchDevice()) {
         container.addEventListener('mousedown', (e) => {
             isDown = true;
-            container.classList.add('active'); // CSS 제어용 클래스
+            container.classList.add('active'); 
             startX = e.pageX - container.offsetLeft;
             scrollLeft = container.scrollLeft;
-            // 스냅 기능이 있으면 드래그가 끊기므로 일시적 끔
             container.style.scrollSnapType = 'none';
         });
 
@@ -337,7 +332,6 @@
         container.addEventListener('mouseup', () => {
             isDown = false;
             container.classList.remove('active');
-            // 드래그 종료 후 스냅 기능 복원 (부드럽게 위치 잡기 위해)
             container.style.scrollSnapType = 'x mandatory';
         });
 
@@ -345,7 +339,7 @@
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - container.offsetLeft;
-            const walk = (x - startX) * 2; // 스크롤 속도 조절
+            const walk = (x - startX) * 2; 
             container.scrollLeft = scrollLeft - walk;
         });
     }
