@@ -8,9 +8,9 @@
     <style>
         /* 기본 모바일 최적화 스타일 */
         body {
-            background-color: #EAE6DF; /* 배경 톤을 살짝 더 차분하게 */
+            background-color: #EAE6DF;
             font-family: 'Nanum Myeongjo', serif;
-            color: #554C43; /* 폰트 컬러를 부드러운 차콜 브라운으로 변경 */
+            color: #554C43;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,7 +18,6 @@
         }
         .wrap {
             background: linear-gradient(135deg, #FFFCF7 0%, #F8EFE3 50%, #FFFCF7 100%);
-            /* 더 섬세한 이중 금박 라인 효과 */
             box-shadow: 0 15px 35px rgba(0,0,0,0.06), 
                         inset 0 0 0 5px #FFFCF7, 
                         inset 0 0 0 6px #D1BFA5,
@@ -34,17 +33,17 @@
         
         /* 메인 커버 섹션 */
         .cover {
-            padding: 90px 20px 50px 20px; /* 여백 확대 */
+            padding: 90px 20px 50px 20px;
         }
         .cover h1 {
             font-size: 1.4rem; 
             font-weight: 700;  
-            letter-spacing: 5px; /* 자간을 넓혀 우아한 느낌 강조 */
+            letter-spacing: 5px;
             margin-bottom: 35px;
             color: #8B7D6B;
         }
         .main-photo {
-            width: calc(100% - 20px); /* 사진에 약간의 여백 부여 */
+            width: calc(100% - 20px);
             max-height: 600px;
             object-fit: cover;
             border-radius: 4px;
@@ -52,7 +51,7 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
         .cover .names {
-            font-size: 2rem; /* 이름 크기 미세 확대 */
+            font-size: 2rem; 
             font-weight: 700;
             margin: 25px 0;
             color: #4A4238;
@@ -76,17 +75,17 @@
         /* 인사말 섹션 */
         .greeting {
             padding: 30px 20px 50px 20px;
-            line-height: 2.4; /* 줄 간격 확대하여 세련된 느낌 부여 */
+            line-height: 2.4;
             font-size: 0.95rem;
             letter-spacing: 0.3px;
         }
         
         /* 축의금 사양 문구 강력한 강조 스타일 */
         .greeting .notice {
-            font-size: 1.05rem; /* 글씨 크기 확대 */
-            color: #3B332A; /* 텍스트를 가장 진한 톤으로 변경하여 대비 높임 */
-            font-weight: 800; /* 가장 굵은 웨이트 적용 */
-            margin-bottom: 25px; /* 여백 축소 */
+            font-size: 1.05rem; 
+            color: #3B332A; 
+            font-weight: 800; 
+            margin-bottom: 25px; 
             line-height: 1.8;
             letter-spacing: 0.5px;
         }
@@ -117,8 +116,8 @@
 
         /* 갤러리 섹션 */
         .gallery-section {
-            padding: 40px 0 80px 0; /* 마지막 섹션이므로 하단 여백을 조금 더 확보 */
-            position: relative; /* 내비게이션 버튼 배치를 위해 */
+            padding: 40px 0 80px 0; 
+            position: relative; 
         }
         .gallery-section h2 {
             font-size: 1.2rem;
@@ -138,12 +137,12 @@
 
         .gallery-container {
             display: flex;
-            overflow-x: auto; /* 터치 스크롤 유지 */
+            overflow-x: auto; 
             scroll-snap-type: x mandatory;
             gap: 15px;
-            padding: 0 20px 20px 20px;
-            scroll-behavior: smooth; /* 부드러운 스크롤 */
-            /* PC에서 마우스 드래그 스크롤을 위한 자바스크립트 사용 시 스냅 방해될 수 있어 설정 조절 */
+            /* ★ 핵심 수정: 아이템 82% + 좌측 9% + 우측 9% = 100% 중앙 정렬 완벽 계산 */
+            padding: 0 9% 20px 9%; 
+            scroll-behavior: smooth; 
             -webkit-overflow-scrolling: touch; 
         }
 
@@ -163,11 +162,11 @@
             flex: 0 0 82%; 
             aspect-ratio: 3 / 4; 
             scroll-snap-align: center;
-            border-radius: 4px; /* 테두리를 살짝 더 각지게 하여 모던한 느낌 */
+            border-radius: 4px; 
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.06);
             background-color: #f5f5f5; 
-            border: 1px solid #EAE3D9; /* 사진에 얇은 테두리 추가 */
+            border: 1px solid #EAE3D9; 
         }
         .gallery-item img {
             width: 100%;
@@ -175,7 +174,6 @@
             display: block;
             object-fit: cover; 
             object-position: center;
-            /* PC에서 이미지 드래그 방지 (스크롤드래그와 충돌방지) */
             -webkit-user-drag: none;
             user-select: none;
         }
@@ -184,7 +182,7 @@
         .gallery-nav {
             position: absolute;
             top: 50%;
-            transform: translateY(-100%); /* 아이템 위치 고려 조절 */
+            transform: translateY(-100%); 
             background-color: rgba(255, 255, 255, 0.7);
             color: #8D8173;
             border: 1px solid #D1BFA5;
@@ -193,7 +191,7 @@
             height: 40px;
             font-size: 1.2rem;
             cursor: pointer;
-            display: none; /* 기본 숨김 */
+            display: none; 
             align-items: center;
             justify-content: center;
             z-index: 10;
@@ -205,7 +203,6 @@
         .gallery-nav.prev { left: 10px; }
         .gallery-nav.next { right: 10px; }
 
-        /* PC(pointer가 fine) 환경에서만 버튼 표시 */
         @media (pointer: fine) {
             .gallery-nav {
                 display: flex;
